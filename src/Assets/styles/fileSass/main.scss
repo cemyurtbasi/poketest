@@ -1,0 +1,31 @@
+@import "utils";
+@import "reset";
+@import "antCustom";
+
+// Partner components
+
+@import "../partnerComponents/loading/loading";
+@import "../partnerComponents/messages/pageNotFound";
+@import "../partnerComponents/messages/dataNotFound";
+@import "../partnerComponents/messages/confirmModal";
+@import "../partnerComponents/icons/icon";
+@import "../partnerComponents/modal/modalGeneral";
+@import "../partnerComponents/table/tableCustom";
+
+//form elementleri
+@import "../partnerComponents/formElement/formElementLabel";
+@import "../partnerComponents/formElement/formTextInput";
+@import "../partnerComponents/formElement/formSelectBox";
+@import "../partnerComponents/formElement/formSubmitButton";
+@import "../partnerComponents/formElement/formInputNumber";
+@import "../partnerComponents/formElement/formTextArea";
+@import "../partnerComponents/formElement/formCheckBox";
+@import "../partnerComponents/formElement/formTimePicker";
+@import "../partnerComponents/formElement/formDatePicker";
+@import "../partnerComponents/formElement/formDateAndTimePicker";
+@import "../partnerComponents/formElement/formRadioGroup";
+@import "../partnerComponents/formElement/formSwitch";
+@import "../partnerComponents/formElement/formMask";
+@import "../partnerComponents/formElement/formListInputs";
+@import "../partnerComponents/formElement/formResponsive";
+@import "../partnerComponents/formElement/formMultiUploadFile";

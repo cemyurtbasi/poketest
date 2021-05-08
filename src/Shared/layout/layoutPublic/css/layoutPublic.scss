@@ -1,0 +1,13 @@
+.layoutPublic {
+  background-color: #F5F3F3;
+  min-height: 100vh;
+  &-header {
+    @extend %displayCenterCenter;
+    border: 1px solid #cecdcd;
+    height: 35px;
+    > a {
+      color:#2C59A1;
+      margin: 0 10px;
+    }
+  }
+}

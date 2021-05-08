@@ -1,0 +1,81 @@
+.pokemons {
+  @extend %displayFull;
+  &-header {
+    margin-top: 30px;
+    padding: 5px 10px;
+    @extend %displayFull;
+    &-logo,
+    &-immyflyLogo {
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    &-logo {
+      max-width: 400px;
+      margin-bottom: 30px;
+    }
+    &-immyflyLogo {
+      max-width: 100px;
+      margin-bottom: 30px;
+    }
+    &-text {
+      h1,
+      p {
+        text-align: center;
+        font-weight: bold;
+        color: rgb(85, 84, 84);
+      }
+      h1 {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+    }
+    &-searchPaging {
+      &__search {
+        height: 35px;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 15px 0;
+      }
+      &-paging {
+        @extend %displayBetweenCenter;
+        position: relative;
+        width: 100%;
+        &__prev,
+        &__next {
+          cursor: pointer;
+          @extend %displayCenterCenter;
+          width: 30px;
+          height: 30px;
+          background-color: #6c8dcf;
+          border-radius: 50%;
+          color: white;
+        }
+        &__page {
+          width: 50px !important;
+          padding-left: 15px;
+        }
+
+        &::before {
+          content: "page";
+          position: absolute;
+          bottom: -15px;
+          font-size: 15px;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+  }
+  &-content {
+    width: 100%;
+    @extend %displayBetween;
+    max-width: 1300px;
+    flex-wrap: wrap;
+    padding: 30px 50px;
+    @include media767 {
+      padding: 20px 30px;
+    }
+  }
+}
