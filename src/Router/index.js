@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import PageNotFound from "../Shared/partnerComponents/messages/pageNotFound";
 import Loading from "../Shared/partnerComponents/loading/loading";
 import { RouterPublic } from "./routerComponents";
@@ -34,9 +34,9 @@ const Router = () => {
 
   return (
     <Suspense fallback={<Loading />}>
-      <Switch>
-        <Route path="/" component={RouterPublic} />
-      </Switch>
+      <Routes>
+        <Route path="*" element={<RouterPublic/>} />
+      </Routes>
     </Suspense>
   );
 };

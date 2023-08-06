@@ -1,5 +1,5 @@
 import { memo, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Service from "../../../Service";
 import { pokemonDetailModel } from "../../../Shared/models/pokemonDetail";
 import Loading from "../../../Shared/partnerComponents/loading/loading";
@@ -9,13 +9,13 @@ import "./css/pokemonDetail.scss";
 const PokemonDetail = memo((props) => {
   const [pokemonDetail, setPokemonDetail] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { name: pokemonName } = useParams();
 
   useEffect(() => {
-    const name = props.match.params.name;
     const service = new Service();
     setLoading(true);
     service.pokemon
-      .getPokemonDetail(name)
+      .getPokemonDetail(pokemonName)
       .then((pokeData) => {
         setPokemonDetail(pokemonDetailModel(pokeData));
         setLoading(false);
@@ -23,7 +23,7 @@ const PokemonDetail = memo((props) => {
       .catch((err) => {
         setLoading(false);
       });
-  }, [props.match.params.name]);
+  }, [pokemonName]);
 
   return (
     <div className="pokemonDetail">
